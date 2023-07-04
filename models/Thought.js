@@ -9,8 +9,6 @@ const thoughtSchema = new Schema({
   reactions: [reactionSchema],
   createdAt:{ type: Date, default: Date.now },
 
-  //// add getter to format the timestamp
-
 },
 {
   toJSON: {
@@ -25,8 +23,8 @@ thoughtSchema.virtual('reactionCount').get(function () {
 });
 
 
-const Blog = model('Blog', thoughtSchema);
+const Thought = model('Thought', thoughtSchema);
 
 
 
-module.exports = Blog;
+module.exports = Thought;
